@@ -64,7 +64,7 @@ h2 {
     margin-bottom: 15px; /* プロジェクトの下部余白 */
     padding: 20px; /* パディング */
     border: 3px solid #858585; /* 境界線 */
-    width: 80%; /* 横幅に余白を作る */
+    width: 90%; /* 横幅に余白を作る */
     margin: 20px auto; /* H2の左右中央揃え */
 }
 
@@ -74,8 +74,29 @@ a {
 
 .skills {
     display: grid; /* グリッドレイアウト */
-    grid-template-columns: repeat(3, 1fr); /* カラム数を指定 */
+    grid-template-columns: repeat(2, 1fr); /* デフォルトでは2カラム */
     gap: 20px; /* グリッド間の隙間 */
+}
+
+/* スクリーン幅が768px以上のデバイス用: 3カラム */
+@media (min-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(3, 1fr); /* 3カラム */
+    }
+}
+
+/* スクリーン幅が1024px以上のデバイス用: 4カラム */
+@media (min-width: 1024px) {
+    .skills {
+        grid-template-columns: repeat(4, 1fr); /* 4カラム */
+    }
+}
+
+/* スクリーン幅が480px未満のデバイス用: 1カラム */
+@media (max-width: 480px) {
+    .skills {
+        grid-template-columns: 1fr; /* 1カラム */
+    }
 }
 
 .skill-box {
