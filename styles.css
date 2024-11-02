@@ -113,6 +113,14 @@ a {
     text-align: center; /* テキストを中央揃え */
     background-color: rgba(255, 255, 255, 0.38); /* スキルボックスの背景色 */
     box-shadow: 0 2px 5px rgba(1, 0, 0, 0.1); /* ボックスシャドウ */
+    width: 100%; /* Ensures consistent width for each skill box */
+    padding: 20px; 
+}
+.skill-box img {
+    width: 80px; /* Set a consistent width */
+    height: 80px; /* Set a consistent height */
+    object-fit: contain; /* Ensures image fits within specified dimensions without distortion */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 .image {
@@ -122,3 +130,77 @@ a {
     margin-bottom: 15px; /* 下部マージン */
 }
 footer{text-align: center;}
+
+/*写真のスライダーchatジーピーティー
+*/
+
+.slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+}
+
+.photo-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+/*ここまで*/
+
+
+/* ボタンのスタイル */
+label {
+    display: inline-block;
+    padding: 6px 13px;
+    color: white;
+    background-color: rgb(255, 137, 231);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* チェックボックスは非表示 */
+#toggle {
+    display: none;
+}
+
+/* チェックされている場合、contentを表示 */
+#toggle:checked ~ .content {
+    display: block;
+}
+
+/* 初期状態では非表示 */
+.content {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 画像のスタイル */
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -23,7 +23,7 @@
     
     <section id="about">
         <h2>About me</h2>
-        <p>大阪公立大学工業高等専門学校知能情報コース2年の田所安里です。</p>
+        <p>大阪公立大学工業高等専門学校 知能情報コース2年の田所安里です。</p>
     </section>
 
     <section id="products">
@@ -38,6 +38,22 @@
 
         <div class="product">
             <h3 class="product2">位置特定アプリ</h3>
+            
+
+    <title>写真スライダー</title>
+
+
+    <div class="slider">
+        <button class="arrow left" onclick="previousSlide()">&#9664;</button>
+        <div class="photo-container">
+            <img class="photo" src="photo1.jpg" alt="写真1">
+            <img class="photo" src="photo2.jpg" alt="写真2">
+            <img class="photo" src="photo3.jpg" alt="写真3">
+        </div>
+        <button class="arrow right" onclick="nextSlide()">&#9654;</button>
+    </div>
+    <script src="script.js"></script>
+
             <p>
                 <a href="https://colab.research.google.com/drive/166H3k0Si1FhUbZ3mG6Mby1pfBiJ7XhW2?usp=sharing" target="_blank">GoogleColabで開く</a>
                 <br>Pythonで作りました。</p>
@@ -68,7 +84,21 @@
             <div class="skill-box">
                 <div class="image"><img src="IMG/blender.png" width=128 height=72></div>
                 <p><strong>blender</strong></p>
-                <p>中学生の時にゲームの武器を3Dモデリングしていました。<a href = "IMG/m4a1.png","IMG/m4.JPG">写真を見る</a></p>
+                <p>中学生の時にゲームの武器を3Dモデリングしていました。
+
+
+   <!-- ボタンとしてのラベル -->
+    <input type="checkbox" id="toggle">
+    <label for="toggle">写真を見る</label>
+
+    <!-- 表示されるコンテンツ -->
+    <div class="content">
+        <h3>表示されたテキスト</h3>
+        
+        <img src="IMG/m4a1.png">
+    </div>
+
+<a href = "IMG/m4a1.png">写真を見る</a></p>
             </div>
             <div class="skill-box">
                 <div class="image"><img src="IMG/scratch.png" width=100 height=100></div>
