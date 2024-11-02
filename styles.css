@@ -43,8 +43,7 @@ nav ul li a {
 }
 
 section {
-    margin: 20px 0; /* セクションの上下余白 */
-    border-radius: 20px; /* セクションの角を丸く */
+    margin: 20px 0px; /* セクションの上下余白 */
     padding: 10px; /* 内部余白 */
     text-align: center; /* テキストを中央揃え */
 }
@@ -58,12 +57,15 @@ h2 {
     margin-bottom: 10px; /* H2の下部余白 */
     padding: 10px; /* H2の内側余白 */
     width: 80%; /* 横幅に余白を作る */
+    text-align: center; /* テキストを中央揃え */
 }
 
 .project {
     margin-bottom: 15px; /* プロジェクトの下部余白 */
     padding: 20px; /* パディング */
     border: 3px solid #858585; /* 境界線 */
+    width: 80%; /* 横幅に余白を作る */
+    margin: 20px auto; /* H2の左右中央揃え */
 }
 
 a {
