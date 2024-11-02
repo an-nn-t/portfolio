@@ -1,111 +1,95 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #cbabff;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-#about{
-    
-    border: 1.5px solid #d3bcff;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 0 15px;
-}
-
-.project {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f0f0f0;
-}
-
-a {
-    color:rgba(43, 166, 214, 0.968)
-}
-
-#about{
-    text-align: center;
-
-}
-
-h2{text-align: center;}
-
-.project2 {
-    font-size: 17px;
-}
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    color:hwb(0 33% 67%)
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+    background-color: rgb(246, 226, 255); /* 背景色 */
+    line-height: 1.8; /* 行間 */
+    padding: 100px;
 }
 
-.timeline {
-    position: relative;
-    margin: 20px 0;
-    padding-left: 20px;
-    border-left: 2px solid #333;
+header {
+    background-color: gray; /* ヘッダーの背景色 */
+    border-radius: 20px; /* ヘッダーの角を丸く */
+    padding: 18px; /* ヘッダーの内側の余白 */
+    text-align: center; /* テキストを中央揃え */
+    margin-top: 10px; /* 20pxの余白を追加 */
+    
 }
 
-.event {
-    margin-bottom: 20px;
-    position: relative;
+h1 {
+    color: white; /* H1の文字色 */
+    padding: 100px;
 }
 
-.event:before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    background-color: #333;
-    border-radius: 50%;
+nav ul {
+    list-style-type: none; /* リストのスタイルをなしに */
+    padding: 0; /* パディングをなしに */
+}
+
+nav ul li {
+    display: inline; /* インライン要素として表示 */
+    margin: 0 18px; /* 左右のマージン */
+}
+
+nav ul li a {
+    color: white; /* リンクの文字色 */
+    text-decoration: none; /* テキストの下線をなしに */
+}
+
+section {
+    margin: 20px 0; /* セクションの上下余白 */
+    border-radius: 20px; /* セクションの角を丸く */
+    padding: 10px; /* 内部余白 */
+    text-align: center; /* テキストを中央揃え */
 }
 
 h2 {
-    margin-bottom: 20px;
+    background-color: rgb(128, 128, 128); /* H2の背景色 */
+    border-radius: 15px; /* H2の角を丸く */
+    color: white; /* H2の文字色 */
+    margin: 10px 0; /* H2の上下余白 */
+    padding: 10px;
 }
 
-.link, .pdf {
-    color: #007BFF;
-    text-decoration: none;
+.project {
+    margin-bottom: 15px; /* プロジェクトの下部余白 */
+    padding: 20px; /* パディング */
+    border: 3px solid #858585; /* 境界線 */
+}
+
+a {
+    color: rgba(43, 166, 214, 0.968); /* リンクの色 */
+}
+
+
+
+h1 {
+    padding: 10px 20px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    border: 1px dashed gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
 }
