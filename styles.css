@@ -3,27 +3,28 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color:hwb(0 33% 67%)
+    color: hwb(0 33% 67); /* テキストのデフォルト色 */
 }
 
 body {
     background-color: rgb(246, 226, 255); /* 背景色 */
     line-height: 1.8; /* 行間 */
-    padding: 100px;
+    padding: 20px; /* 全体の内側余白（スマホ対応のため小さめに） */
 }
 
 header {
     background-color: gray; /* ヘッダーの背景色 */
     border-radius: 20px; /* ヘッダーの角を丸く */
-    padding: 18px; /* ヘッダーの内側の余白 */
+    padding: 10px; /* ヘッダーの内側の余白を小さく */
     text-align: center; /* テキストを中央揃え */
-    margin-top: 10px; /* 20pxの余白を追加 */
-    
+    margin-top: 5px; /* ヘッダーの上部マージンを小さく */
+    width: 80%;
+    margin: 0 auto; /* 左右中央揃え */
 }
 
 h1 {
     color: white; /* H1の文字色 */
-    padding: 100px;
+    padding: 5px 10px; /* H1の内側余白を小さく */
 }
 
 nav ul {
@@ -33,7 +34,7 @@ nav ul {
 
 nav ul li {
     display: inline; /* インライン要素として表示 */
-    margin: 0 18px; /* 左右のマージン */
+    margin: 0 10px; /* 左右のマージンを小さく */
 }
 
 nav ul li a {
@@ -52,8 +53,11 @@ h2 {
     background-color: rgb(128, 128, 128); /* H2の背景色 */
     border-radius: 15px; /* H2の角を丸く */
     color: white; /* H2の文字色 */
-    margin: 10px 0; /* H2の上下余白 */
-    padding: 10px;
+    margin: 0 auto; /* H2の左右中央揃え */
+    margin-top: 10px; /* H2の上部余白 */
+    margin-bottom: 10px; /* H2の下部余白 */
+    padding: 10px; /* H2の内側余白 */
+    width: 80%; /* 横幅に余白を作る */
 }
 
 .project {
@@ -66,30 +70,24 @@ a {
     color: rgba(43, 166, 214, 0.968); /* リンクの色 */
 }
 
-
-
-h1 {
-    padding: 10px 20px;
-}
-
 .skills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: grid; /* グリッドレイアウト */
+    grid-template-columns: repeat(3, 1fr); /* カラム数を指定 */
+    gap: 20px; /* グリッド間の隙間 */
 }
 
 .skill-box {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc; /* スキルボックスの境界線 */
+    border-radius: 10px; /* スキルボックスの角を丸く */
+    padding: 10px; /* 内部余白 */
+    text-align: center; /* テキストを中央揃え */
+    background-color: #fff; /* スキルボックスの背景色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
 }
 
 .image {
-    border: 1px dashed gray;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 10px;
+    border: 1px dashed gray; /* 画像の境界線 */
+    border-radius: 10px; /* 画像の角を丸く */
+    padding: 20px; /* 内部余白 */
+    margin-bottom: 10px; /* 下部マージン */
 }
