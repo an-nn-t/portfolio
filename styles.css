@@ -60,14 +60,20 @@ h2 {
     text-align: center; /* テキストを中央揃え */
 }
 
-.project {
+h3{color:rgb(79, 79, 79);}
+
+.product {
     margin-bottom: 15px; /* プロジェクトの下部余白 */
     padding: 20px; /* パディング */
-    border: 3px solid #858585; /* 境界線 */
+    border: 2.6px solid #ccc;
     width: 90%; /* 横幅に余白を作る */
     margin: 20px auto; /* H2の左右中央揃え */
+    border-radius:10px; 
+    background-color: rgba(255, 255, 255, 0.38); /* スキルボックスの背景色 */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
 }
 
+p{color:rgb(94, 94, 94);}
 a {
     color: rgba(43, 166, 214, 0.968); /* リンクの色 */
 }
@@ -100,12 +106,13 @@ a {
 }
 
 .skill-box {
-    border: 2px solid #ccc; /* スキルボックスの境界線 */
+
+    border: 2.6px solid #ccc; /* スキルボックスの境界線 */
     border-radius: 10px; /* スキルボックスの角を丸く */
     padding: 10px; /* 内部余白 */
     text-align: center; /* テキストを中央揃え */
-    background-color: #fff; /* スキルボックスの背景色 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+    background-color: rgba(255, 255, 255, 0.38); /* スキルボックスの背景色 */
+    box-shadow: 0 2px 5px rgba(1, 0, 0, 0.1); /* ボックスシャドウ */
 }
 
 .image {
@@ -114,3 +121,4 @@ a {
     padding: 20px; /* 内部余白 */
     margin-bottom: 10px; /* 下部マージン */
 }
+footer{text-align: center;}
