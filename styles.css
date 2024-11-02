@@ -118,7 +118,7 @@ a {
 .image {
     border: 1px dashed gray; /* 画像の境界線 */
     border-radius: 10px; /* 画像の角を丸く */
-    padding: 20px; /* 内部余白 */
-    margin-bottom: 10px; /* 下部マージン */
+    padding: 15px; /* 内部余白 */
+    margin-bottom: 15px; /* 下部マージン */
 }
 footer{text-align: center;}
