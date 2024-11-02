@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    color:white;
     background-color: gray; /* ヘッダーの背景色 */
     border-radius: 20px; /* ヘッダーの角を丸く */
     padding: 10px; /* ヘッダーの内側の余白を小さく */
@@ -22,8 +23,7 @@ header {
     margin: 0 auto; /* 左右中央揃え */
 }
 
-h1 {
-    color: white; /* H1の文字色 */
+h1{color:white; /* H1の文字色 */
     padding: 5px 10px; /* H1の内側余白を小さく */
 }
 
