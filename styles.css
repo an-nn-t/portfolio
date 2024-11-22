@@ -73,6 +73,8 @@ h3{color:rgb(79, 79, 79);}
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
 }
 
+.oseronosyasin{text-align: center;}
+
 p{color:rgb(94, 94, 94);}
 a {
     color: rgba(43, 166, 214, 0.968); /* リンクの色 */
