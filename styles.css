@@ -135,6 +135,9 @@ footer{text-align: center;}
 
 /*写真のスライダーchatジーピーティー
 */
+.dougahensyuu {
+    opacity: 0.7;
+}
 
 .slider {
     display: flex;
