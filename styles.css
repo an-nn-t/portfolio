@@ -189,46 +189,138 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 10px 5px; /* スマホ表示時のパディングを減らす */
+    }
+    
+    section {
+        padding: 10px 5px; /* セクションのパディングを減らす */
+        margin: 20px auto; /* セクション間のマージンも減らす */
+    }
+    
     .skills {
         grid-template-columns: 1fr;
+        gap: 15px; /* スキルボックス間の間隔を減らす */
     }
     
     header {
-        width: 95%;
-        padding: 15px;
+        width: 100%; /* ヘッダーの幅を最大化 */
+        padding: 15px 10px; /* パディングを減らす */
+        border-radius: 12px; /* 角丸を少し小さく */
+        margin: 5px auto 20px; /* マージンを減らす */
     }
     
     h1 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* フォントサイズを小さく */
+    }
+    
+    h2 {
+        width: 95%; /* 見出しの幅を広げる */
+        padding: 10px; /* パディングを減らす */
+        margin: 15px auto 20px; /* マージンを減らす */
     }
     
     .product {
-        width: 95%;
-        padding: 15px;
+        width: 100%; /* 幅を最大化 */
+        padding: 15px 10px; /* パディングを減らす */
+        margin: 20px auto; /* マージン調整 */
     }
     
+    /* タイムラインのスマホ表示調整 */
     .timeline {
-        width: 95% !important;
-        padding-left: 50px !important; /* モバイル表示時の余白調整 */
+        width: 100% !important; /* 幅を最大化 */
+        padding-left: 45px !important; /* 左側の余白を調整・より左に */
+        margin: 20px auto; /* マージン調整 */
     }
     
     .timeline::before {
-        left: 20px !important;
+        left: 15px !important; /* 縦線の位置をさらに左に調整 */
     }
     
+    .timeline-item {
+        margin-bottom: 20px; /* アイテム間のマージンを減らす */
+    }
+    
+    /* 円を削除する */
     .timeline-item::before {
-        left: 20px !important;
+        display: none !important; /* 円を非表示に */
     }
     
     .timeline-item .date {
-        position: static !important;
-        margin-bottom: 5px;
+        position: relative !important; /* 日付の位置を相対的に変更 */
+        left: -35px !important; /* 左位置を調整 */
+        margin-bottom: 5px; /* 下マージンを追加 */
         font-weight: bold;
+        font-size: 0.9rem; /* フォントサイズを小さく */
+        text-align: left; /* 左揃えにする */
+        min-width: auto; /* 幅の制限を解除 */
+        width: auto; /* 幅を自動に */
+        background-color: white; /* 背景色を白に - 透けないように */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* わずかな影を追加 */
+        padding: 3px 6px; /* 少しパディングを追加 */
+        border-radius: 3px; /* 角を丸く */
+        z-index: 3; /* 縦線よりも上に表示 */
     }
     
     .timeline-item .content {
-        margin-left: 40px !important;
-        width: calc(100% - 40px) !important;
+        margin-left: 0 !important; /* 左マージンを削除 */
+        width: 100% !important; /* 幅を最大化 */
+        padding: 12px; /* パディングを減らす */
+        position: relative;
+        z-index: 2; /* コンテンツを縦線より上に表示 */
+    }
+    
+    /* スライダーのスマホ表示調整 */
+    .slider {
+        max-width: 100%; /* 幅を最大化 */
+    }
+    
+    .photo {
+        max-height: 250px; /* 高さを小さく */
+    }
+    
+    .arrow {
+        width: 30px; /* ボタンを小さく */
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .arrow.left {
+        left: 5px;
+    }
+    
+    .arrow.right {
+        right: 5px;
+    }
+    
+    /* オセロ画像のスマホ表示調整 */
+    .oseronosyasin {
+        max-height: 250px; /* 高さを小さく */
+    }
+    
+    /* ナビゲーションのスマホ調整 */
+    nav ul li {
+        margin: 0 8px; /* マージンを減らす */
+    }
+    
+    nav ul li a, nav a {
+        font-size: 1rem; /* フォントサイズを小さく */
+    }
+    
+    /* スキルボックスのスマホ調整 */
+    .skill-box {
+        padding: 15px 10px; /* パディングを減らす */
+    }
+    
+    .skill-box img {
+        width: 60px; /* 画像を小さく */
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .image {
+        padding: 10px; /* パディングを減らす */
+        margin-bottom: 15px;
     }
 }
 
@@ -310,7 +402,7 @@ footer {
     left: 90px; /* 縦線の位置を調整 */
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, #5d5d5d, #7d7d7d);
+    background: linear-gradient(to bottom, #729aba, #7c62b4);
     border-radius: 2px;
     z-index: 0; /* 縦線を円の後ろに配置するために追加 */
 }
