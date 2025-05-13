@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio | anri</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,37 +25,76 @@
     
     <section id="about">
         <h2>About me</h2>
-        <p>大阪公立大学工業高等専門学校 知能情報コース2年の田所安里です。</p>
+        <p>大阪公立大学工業高等専門学校 知能情報コース 3年に所属しています。</p>
     </section>
+    
+    <section id="about-me">
+        <h2>Career Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="date">2023年 4月</div>
+                <div class="content">大阪公立大学工業高等専門学校 入学</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="date">2024年 4月</div>
+                <div class="content">2年 知能情報コースに進級</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="date">2025年 1月</div>
+                <div class="content"><a href="https://gci2.t.u-tokyo.ac.jp/archives/course/gci-2024-winter" target="_blank">GCI 2024 Winter</a> 修了</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="date">2025年 3月</div>
+                <div class="content"><a href="https://www.ct.omu.ac.jp/info/news/entry-80054.html" target="_blank">大阪公立大学 SUCSUC DETECT 2025</a><p>審査員特別賞・大阪信用金庫賞・NEDO賞</p></div>
+            </div>
 
+                <div class="timeline-item">
+                <div class="date">2025年 3月</div>
+                <div class="content">高専テクノゼミ実践教育参加</div>
+            </div>
+
+            <div class="timeline-item">
+                    <div class="date">2025年 5月</div>
+                    <div class="content"><a href="https://www.ct.omu.ac.jp/info/news/entry-83010.html" target="_blank">DCON2025</a> 本選出場<p>農林水産大臣賞受賞</p></div>
+            </div>
+
+    </section>
+    
     <section id="products">
-
         <h2>Products</h2>
 
         <div class="product">
-            <h3>高専祭で展示したクイズリバーシ</h3>
+            <h3>2年の高専祭で展示したクイズリバーシ</h3>
             <p><a href="https://nmst0811.github.io/power2_7-4/" target="_blank">https://nmst0811.github.io/power2_7-4/</a>
-                <br><img class=oseronosyasin src="IMG/osero.png"width=500 height=auto>
-                <br>5人でHTML、CSS、Javascriptを使って作成しました。</p>
+                <br><img class="oseronosyasin" src="IMG/osero.png" width="500" height="auto" alt="オセロゲームのスクリーンショット">
+                <br>クイズに答えると駒を置けるオセロを、5人でHTML、CSS、Javascriptを使って作成しました。</p>
         </div>
 
         <div class="product">
             <h3 class="product2">位置特定アプリ</h3>
-            <br><img class=oseronosyasin src="IMG/課題04.png"width=500 height=auto>
+            <img class="oseronosyasin" src="IMG/課題04.png" width="500" height="auto" alt="位置特定アプリのスクリーンショット">
             <p>
                 <a href="https://colab.research.google.com/drive/166H3k0Si1FhUbZ3mG6Mby1pfBiJ7XhW2?usp=sharing" target="_blank">GoogleColabで開く</a>
-                <br>Pythonで作りました。</p>
-
+                <br>(製作時期：2024年7月)目印となる場所とその場所からの所要時間、手段(徒歩・自転車)を入力することで大まかな場所をマップに描画するプログラムをPythonで作りました。</p>
         </div>
+        
         <div class="product">
             <h3 class="product2">ロケットゲーム</h3>
-            <br><img class=oseronosyasin src="IMG/ロケット1.jpg"width=500 height=auto>
-            
-            <img class=oseronosyasin src="IMG/ロケット2.png"width=500 height=auto>
-            <img class=oseronosyasin src="IMG/ロケット3.jpg"width=500 height=auto>
-                <img class=oseronosyasin src="IMG/ロケット4.png"width=500 height=auto>
-                <br><p>
-                <a href="https://github.com/asfyhroea/game7" target="_blank">新しいタブでGitHubのページを開く</a>
+            <div class="slider">
+                <button class="arrow left" onclick="previousSlide()">&#9664;</button>
+                <div class="photo-container">
+                    <img class="photo" src="IMG/ロケット1.jpg" alt="ロケットゲーム画面1">
+                    <img class="photo" src="IMG/ロケット2.png" alt="ロケットゲーム画面2">
+                    <img class="photo" src="IMG/ロケット3.jpg" alt="ロケットゲーム画面3">
+                    <img class="photo" src="IMG/ロケット4.png" alt="ロケットゲーム画面4">
+                </div>
+                <button class="arrow right" onclick="nextSlide()">&#9654;</button>
+            </div>
+            <p>
+                <a href="https://github.com/an-nn-t/game7" target="_blank">新しいタブでGitHubのページを開く</a>
                 <br>PyGameを使用してロケットゲームを作成しました。(製作時期：2025年1月)
             <br>Rocket Gameは、プレイヤーがロケットを操作して弾を発射し、降ってくる物体を撃ち落としながら、時間内に高スコアを目指すアクションゲームです。
             ロケットはAキー・←キーで左移動、Dキー・→キーで右移動、スペースキーで弾を発射します。
@@ -63,116 +104,79 @@
             初めてクラスを使用した制作物であり、本作を通じてクラスの理解を深めることができました。</p>
         </div>
 
-    </div>
-    <div class="product">
-        <h3 class="product2">手書き数字分類・精度判定アプリ</h3>
-    <br><img class=tegaki src="IMG/手書き数字一枚目.jpg"width=290 height=auto>
-        <img class=tegaki src="IMG/手書き数字2枚目.jpg"width=280 height=auto>
-        <img class=tegaki src="IMG/手書き数字3枚目.jpg"width=280 height=auto>
-<br><p>
-            <a href="https://github.com/asfyhroea/GUI" target="_blank">新しいタブでGitHubのページを開く</a>
-            <br>手書き数字を分類して精度を判定するアプリを作成しました。(制作時期：2025年2月／制作時間：12時間)
-        <br>
-        手書き数字認識アプリを作成しました。PyTorch を用いて 畳み込みニューラルネットワーク(CNN) を構築し、
-        MNIST データセットを学習させることで、高精度な手書き数字分類を実現しました。
-        PySide6 を使用して直感的に操作できる GUI を実装し、
-        描いた数字の認識結果と信頼度を表示します。きれいな数字ほど高精度に認識される点が特徴です。 
-        モデル構築から GUI 実装までを一貫して行い、使いやすさと精度向上にこだわりました。
-操作方法はリンク先のREADMEをご覧ください。</p>
-    </div>
+        <div class="product">
+            <h3 class="product2">手書き数字分類・精度判定アプリ</h3>
+            <div class="slider">
+                <button class="arrow left" onclick="previousSlide()">&#9664;</button>
+                <div class="photo-container">
+                    <img class="photo" src="IMG/手書き数字一枚目.jpg" alt="手書き数字アプリ画面1">
+                    <img class="photo" src="IMG/手書き数字2枚目.jpg" alt="手書き数字アプリ画面2">
+                    <img class="photo" src="IMG/手書き数字3枚目.jpg" alt="手書き数字アプリ画面3">
+                </div>
+                <button class="arrow right" onclick="nextSlide()">&#9654;</button>
+            </div>
+            <p>
+                <a href="https://github.com/an-nn-t/GUI" target="_blank">新しいタブでGitHubのページを開く</a>
+                <br>手書き数字を分類して精度を判定するアプリを作成しました。(制作時期：2025年2月／制作時間：12時間)
+            <br>
+            PyTorchを使って畳み込みニューラルネットワーク（CNN）を構築し、MNISTデータセットで手書き数字の分類モデルを学習させました。
+GUIはPySide6で実装し、マウスで数字を描くだけで、即座に分類結果と信頼度が表示される仕組みになっています。きれいな数字ほど高い精度で認識される点も特徴です。
 
-
-    </section>
-<!--あとで使えるようにする
-
-    <title>写真スライダー</title>
-
-
-    <div class="slider">
-        <button class="arrow left" onclick="previousSlide()">&#9664;</button>
-        <div class="photo-container">
-            <img class="photo" src="photo1.jpg" alt="写真1">
-            <img class="photo" src="photo2.jpg" alt="写真2">
-            <img class="photo" src="photo3.jpg" alt="写真3">
+モデル構築からインターフェースの実装まで一貫して自分で行い、精度の向上と使いやすさの両方にこだわって開発しました。
+操作方法などの詳細は、READMEをご覧ください。</p>
         </div>
-        <button class="arrow right" onclick="nextSlide()">&#9654;</button>
-    </div>
-    <script src="script.js"></script>
--->
-
+    </section>
 
     <section id ="skills">
         <h2>Skill</h2>
 
-
         <section class="skills">
             <div class="skill-box">
-                <div class="image"><img src="IMG/htmlcss.png" width=100 height=100></div>
+                <div class="image"><img src="IMG/htmlcss.png" alt="HTML/CSS logo"></div>
                 <p><strong>HTML & CSS</strong></p>
                 <p>このポートフォリオや会社のホームページを作成しました。</p>
-                <a href="https://tosikaihatu.com">会社のホームページを表示</a>
+                <a href="https://tosikaihatu.com"target="_blank">会社のホームページを表示</a>
             </div>
             <div class="skill-box">
-                <div class="image"><img src="IMG/arduino.png" width=128 height=87></div>
+                <div class="image"><img src="IMG/arduino.png" alt="Arduino logo"></div>
                 <p><strong>Arduino</strong></p>
                 <p>2年のマイコンの授業や実習、DCONのプロトタイプ制作で使用しました。
-                    DCONのプロトタイプ制作では、サーボモーターをBluetoothで接続できるようにして
-                    スマホで操作できるようにしました。</p>
+                    DCONのプロトタイプ制作では、サーボモーターをBluetoothで接続し、スマートフォンから操作できるようにしました。</p>
             </div>
             <div class="skill-box">
-                <div class="image"><img class="dougahensyuu" src="IMG/動画編集.png" width=100 height=100></div>
+                <div class="image"><img class="dougahensyuu" src="IMG/動画編集.png" alt="動画編集アイコン"></div>
                 <p><strong>動画編集</strong></p>
                 <p>小中学生の時に動画編集をしていました。
-                    DCONの二次審査の提出資料の動画の編集を担当しました。</p>
+                    DCON二次審査の提出資料の動画編集を担当しました。</p>
             </div>
             <div class="skill-box">
-                <div class="image"><img src="IMG/Atcoder.png" width=100 height=100></div>
-                <p><strong>Atcoder</strong></p>
-                <p>2024年11月からアルゴリズム部門に参加しています。</p>
-                <a href="https://atcoder.jp/users/anriiiii">https://atcoder.jp/users/anriiiii</a>
-                <p>高専二年の時にJOIの一次予選を通過しました。
-                    <!-- <a href="IMG/J254124KH.pdf">予選敢闘賞</a> -->
+                <div class="image"><img src="IMG/Atcoder.png" alt="Atcoder logo"></div>
+                <p><strong>AtCoder</strong></p>
+                <a href="https://atcoder.jp/users/anriiiii"target="_blank">プロフィールページ</a>
+                <p>2024年11月からアルゴリズム部門に参加しています。<br>
+                
+                高専二年の時にJOIの一次予選を通過しました。</p>
             </div>
             <div class="skill-box">
-                <div class="image"><img src="IMG/python.png" width=100 height=100></div>
+                <div class="image"><img src="IMG/python.png" alt="Python logo"></div>
                 <p><strong>Python</strong></p>
-                <p>2年のプログラミング1の授業などで使用しています。</p>
+                <p>普段使用しています。</p>
             </div>
             <div class="skill-box">
-                <div class="image"><img src="IMG/blender.png" width=128 height=72></div>
+                <div class="image"><img src="IMG/blender.png" alt="Blender logo"></div>
                 <p><strong>blender</strong></p>
                 <p>中学生の時にゲームの武器を3Dモデリングしていました。<br>
                     <a href="IMG/m4a1.png">写真を表示</a>
                     <a href="IMG/m4.JPG">写真を表示</a>
-                    <!-- <a href="IMG/syuryuudan.png">写真を表示</a>
-                    <a href="IMG/手りゅう弾.PNG">写真を表示</a>
-                    <a href="IMG/hatuendan.png">写真を表示</a> -->
-                    </p>
-                    </div>
-
-   <!-- ボタンとしてのラベル 
-    <input type="checkbox" id="toggle">
-    <label for="toggle">写真を見る</label>
-                -->
-
-    <!-- 表示されるコンテンツ 
-    <div class="content">
-        <h3>表示されたテキスト</h3>
-        
-        <img src="IMG/m4a1.png">
-    </div>
--->
-
+                </p>
+            </div>
             <div class="skill-box">
-                <div class="image"><img src="IMG/scratch.png" width=100 height=100></div>
+                <div class="image"><img src="IMG/scratch.png" alt="Scratch logo"></div>
                 <p><strong>Scratch</strong></p>
-                <p>小学生の時に作っていました。<br><!--<iframe src="https://scratch.mit.edu/projects/187335258/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>--><!--<a href="https://scratch.mit.edu/products/187335258/embed" target="_blank">パックマンを見る</a>--><br>
-                    <!--<a href ="https://scratch.mit.edu/products/241524944/" target="_blank">カートゲームを見る</a></p>-->
+                <p>小学生の時に作っていました。</p>
             </div>
         </section>
     </section>
-
-    
 
     <footer>
         <p><small>&copy; 2024/12/23 田所安里. All rights reserved.</small></p>
@@ -181,4 +185,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
