@@ -612,6 +612,14 @@ footer {
 /* --- Responsive --- */
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
+    header h1 {
+        white-space: nowrap; /* 改行を禁止 */
+        font-size: 1.4rem;   /* スマホの幅に収まるように少し小さくする(元は1.8rem) */
+        width: 100%;
+        text-align: center;
+        overflow: hidden;    /* 万が一はみ出した場合の安全策 */
+        text-overflow: ellipsis;
+    }
     h2 { font-size: 1.8rem; }
     
     .timeline::before { left: 10px; } 
