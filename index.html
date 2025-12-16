@@ -3,207 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio | anri</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>PORTFOLIO | ANRI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <canvas id="bg-canvas"></canvas>
+
     <header>
-        <h1>Anri's portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#skills">Skill</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Anri's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    
-    <section id="about">
-        <h2>About me</h2>
-        <p>大阪公立大学工業高等専門学校 知能情報コース 3年に所属しています。</p>
-    </section>
-    
-    <section id="about-me">
-        <h2>Timeline</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="date">2023年 4月</div>
-                <div class="content">大阪公立大学工業高等専門学校 入学</div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="date">2024年 4月</div>
-                <div class="content">2年 知能情報コースに進級</div>
-            </div>
-            
-            <!-- <div class="timeline-item">
-                <div class="date">2025年 1月</div>
-                <div class="content"><a href="https://gci2.t.u-tokyo.ac.jp/archives/course/gci-2024-winter" target="_blank">GCI 2024 Winter</a> 修了</div>
-            </div> -->
-            
-            <div class="timeline-item">
-                <div class="date">2025年 3月</div>
-                <div class="content"><a href="https://www.ct.omu.ac.jp/info/news/entry-80054.html" target="_blank">大阪公立大学 SUCSUC DETECT 2025</a><p>審査員特別賞・大阪信用金庫賞・NEDO賞</p></div>
-            </div>
-
-            <!-- <div class="timeline-item">
-                <div class="date">2025年 3月</div>
-                <div class="content">高専テクノゼミ実践教育プログラム参加</div>
-            </div> -->
-
-            <div class="timeline-item">
-                    <div class="date">2025年 5月</div>
-                    <div class="content"><a href="https://dcon.ai/" target="_blank">DCON2025</a> 本選出場<p>農林水産大臣賞</p></div>
-            </div>
-
-            <div class="timeline-item">
-                    <div class="date">2025年 8月</div>
-                    <div class="content"><a href="https://www.jdla.org/certificate/engineer/" target="_blank">JDLA E資格</a>（E2025#2）合格</div>
-            </div>
-
-            <div class="timeline-item">
-                    <div class="date">2025年 9月</div>
-                    <div class="content"><a href="https://www.ct.omu.ac.jp/info/news/entry-91686.html" target="_blank">大公大高専生 ✖ 企業 共創アイデアソン</a><br><p>㈱フォーラムエイト テーマ優秀賞</p></div>
-            </div>
-
-            <div class="timeline-item">
-                    <div class="date">2025年 10月</div>
-                    <div class="content">万博で発表<a href="https://www.ct.omu.ac.jp/info/news/entry-93233.html" target="_blank"><br>学校のHP</a></div>
-            </div>
-            
-
-            <div class="timeline-item">
-                    <div class="date">2025年 11月</div>
-                    <div class="content">基本情報技術者試験 合格</div>
-            </div>
-
-        </div>
-    </section>
-    
-    <section id="products">
-        <h2>Products</h2>
-
-        <div class="product">
-            <h3>2年の高専祭で展示したクイズリバーシ</h3>
-            <img class="oseronosyasin" src="IMG/osero.png" width="500" height="auto" alt="オセロゲームのスクリーンショット">
-                <br><a href="https://nmst0811.github.io/power2_7-4/" target="_blank">ゲームを開く</a>
-                <p>クイズに答えると駒を置けるオセロを、5人でHTML、CSS、Javascriptを使って作成しました。</p>
-        </div>
-
-        <div class="product">
-            <h3 class="product2">位置特定アプリ</h3>
-            <img class="oseronosyasin" src="IMG/課題04.png" width="500" height="auto" alt="位置特定アプリのスクリーンショット">
-            <p>
-                <a href="https://colab.research.google.com/drive/166H3k0Si1FhUbZ3mG6Mby1pfBiJ7XhW2?usp=sharing" target="_blank">GoogleColabで開く</a>
-                <br>(製作時期：2024年7月)目印となる場所とその場所からの所要時間、手段(徒歩・自転車)を入力することで大まかな場所をマップに描画するプログラムをPythonで作りました。</p>
-        </div>
+    <div class="container">
         
-        <div class="product">
-            <h3 class="product2">ロケットゲーム</h3>
-            <div class="slider">
-                <button class="arrow left" onclick="previousSlide()">&#9664;</button>
-                <div class="photo-container">
-                    <img class="photo" src="IMG/ロケット1.jpg" alt="ロケットゲーム画面1">
-                    <img class="photo" src="IMG/ロケット2.png" alt="ロケットゲーム画面2">
-                    <img class="photo" src="IMG/ロケット3.jpg" alt="ロケットゲーム画面3">
-                    <img class="photo" src="IMG/ロケット4.png" alt="ロケットゲーム画面4">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-text">
+                <p>大阪公立大学工業高等専門学校 知能情報コース 3年に所属しています。</p>
+            </div>
+
+            <div style="text-align: center;">
+                <h2 class="timeline-header">TIMELINE</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-scanline"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2023.04</span>
+                        <h3>大阪公立大学工業高等専門学校 入学</h3>
+                    </div>
                 </div>
-                <button class="arrow right" onclick="nextSlide()">&#9654;</button>
-            </div>
-            <p>
-                <a href="https://github.com/an-nn-t/game7" target="_blank">新しいタブでGitHubのページを開く</a>
-                <br>PyGameを使用してロケットゲームを作成しました。(製作時期：2025年1月)
-            <br>Rocket Gameは、プレイヤーがロケットを操作して弾を発射し、降ってくる物体を撃ち落としながら、時間内に高スコアを目指すアクションゲームです。
-            ロケットはAキー・←キーで左移動、Dキー・→キーで右移動、スペースキーで弾を発射します。
-            ランダムに降ってくる食べ物の画像に弾を当てるとスコアが10点加算され、星に当てると50点加算されます。
-            また、特定のスキルアイテムを登場させ、取得で特殊効果を得られるシステムの実装を予定しています。
-            ゲーム終了後にはスコアと「Time Up」のメッセージが表示されます。
-            初めてクラスを使用した制作物であり、本作を通じてクラスの理解を深めることができました。</p>
-        </div>
-
-        <div class="product">
-            <h3 class="product2">手書き数字分類・精度判定アプリ</h3>
-            <div class="slider">
-                <button class="arrow left" onclick="previousSlide()">&#9664;</button>
-                <div class="photo-container">
-                    <img class="photo" src="IMG/手書き数字一枚目.jpg" alt="手書き数字アプリ画面1">
-                    <img class="photo" src="IMG/手書き数字2枚目.jpg" alt="手書き数字アプリ画面2">
-                    <img class="photo" src="IMG/手書き数字3枚目.jpg" alt="手書き数字アプリ画面3">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2024.04</span>
+                        <h3>2年 知能情報コースに進級</h3>
+                    </div>
                 </div>
-                <button class="arrow right" onclick="nextSlide()">&#9654;</button>
-            </div>
-            <p>
-                <a href="https://github.com/an-nn-t/GUI" target="_blank">新しいタブでGitHubのページを開く</a>
-                <br>手書き数字を分類して精度を判定するアプリを作成しました。(制作時期：2025年2月／制作時間：12時間)
-            <br>
-            PyTorchを使って畳み込みニューラルネットワーク（CNN）を構築し、MNISTデータセットで手書き数字の分類モデルを学習させました。
-GUIはPySide6で実装し、マウスで数字を描くと、分類結果と信頼度が表示される仕組みになっています。きれいな数字ほど高い精度で認識される点も特徴です。
 
-モデル構築からインターフェースの実装まで一貫して行い、精度の向上と使いやすさの両方にこだわって開発しました。
-操作方法などの詳細は、READMEをご覧ください。</p>
-        </div>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.03</span>
+                        <h3>大阪公立大学 SUCSUC DETECT 2025</h3>
+                        <p>審査員特別賞・大阪信用金庫賞・NEDO賞 受賞</p>
+                        <a href="https://www.ct.omu.ac.jp/info/news/entry-80054.html" target="_blank">View Details <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-    <section id ="skills">
-        <h2>Skill</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.05</span>
+                        <h3>全国高等専門学校ディープラーニングコンテスト（DCON2025） 本選出場</h3>
+                        <p>農林水産大臣賞 受賞</p>
+                        <a href="https://dcon.ai/" target="_blank">Official Site <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-        <section class="skills">
-            <div class="skill-box">
-                <div class="image"><img src="IMG/htmlcss.png" alt="HTML/CSS logo"></div>
-                <p><strong>HTML & CSS</strong></p>
-                <p>このポートフォリオや会社のホームページを作成しました。</p>
-                <a href="https://tosikaihatu.com"target="_blank">会社のホームページを表示</a>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img src="IMG/arduino.png" alt="Arduino logo"></div>
-                <p><strong>Arduino</strong></p>
-                <p>2年のマイコンの授業や実習、DCONのプロトタイプ制作で使用しました。
-                    DCONのプロトタイプ制作では、ESP32を使用し、サーボモーターをBluetoothで接続してスマートフォンから操作できるようにしました。</p>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img class="dougahensyuu" src="IMG/動画編集.png" alt="動画編集アイコン"></div>
-                <p><strong>動画編集</strong></p>
-                <p>小中学生の時に動画編集をしていました。
-                    DCON二次審査の提出資料の動画編集を担当しました。</p>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img src="IMG/Atcoder.png" alt="Atcoder logo"></div>
-                <p><strong>AtCoder</strong></p>
-                <a href="https://atcoder.jp/users/anriiiii"target="_blank">プロフィールページ</a>
-                <p>2024年11月からアルゴリズム部門に参加しています。<br>
-                
-                <!-- 高専二年の時にJOIの一次予選を通過しました。 -->
-            </p>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img src="IMG/python.png" alt="Python logo"></div>
-                <p><strong>Python</strong></p>
-                <p>普段使用しています。</p>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img src="IMG/blender.png" alt="Blender logo"></div>
-                <p><strong>blender</strong></p>
-                <p>中学生の時にゲームの武器を3Dモデリングしていました。<br>
-                    <a href="IMG/m4a1.png">写真を表示</a>
-                    <a href="IMG/m4.JPG">写真を表示</a>
-                </p>
-            </div>
-            <div class="skill-box">
-                <div class="image"><img src="IMG/scratch.png" alt="Scratch logo"></div>
-                <p><strong>Scratch</strong></p>
-                <p>小学生の時に作っていました。</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.05~10</span>
+                        <h3>メーター数字読み取りモデルのチーム開発</h3>
+                        <p>アノテーションからモデル構築、Webアプリ作成までをチームで開発</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.08</span>
+                        <h3>JDLA E資格（E2025#2）合格</h3>
+                        <a href="https://www.jdla.org/certificate/engineer/" target="_blank">Details <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.09</span>
+                        <h3>大公大高専生 × 企業 共創アイデアソン</h3>
+                        <p>㈱フォーラムエイト テーマ優秀賞</p>
+                        <a href="https://www.ct.omu.ac.jp/info/news/entry-91686.html" target="_blank">Visit Site <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.10</span>
+                        <h3>IP THRIVE「Academy」（大阪・関西万博）</h3>
+                        <p>万博での発表</p>
+                        <a href="https://www.ct.omu.ac.jp/info/news/entry-93233.html" target="_blank">Visit Site <i class="fas fa-external-link-alt"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025.11</span>
+                        <h3>基本情報技術者試験 合格</h3>
+                    </div>
+                </div>
             </div>
         </section>
-    </section>
+
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <h3>クイズリバーシ</h3>
+                    <div class="product-media">
+                        <img src="IMG/osero.png" alt="Quiz Reversi Screenshot" loading="lazy">
+                    </div>
+                    <p>クイズに答えると駒を置けるオセロ。5人チーム開発（HTML, CSS, JS）。</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://nmst0811.github.io/power2_7-4/" target="_blank">Game Start <i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>位置推測アプリ</h3>
+                    <div class="product-media">
+                        <img src="IMG/課題04.png" alt="Location App Screenshot" loading="lazy">
+                    </div>
+                    <p>目印となる場所とその場所からの所要時間、手段(徒歩・自転車)を入力することで大まかな場所をマップに描画するプログラムをPythonで作りました。（2024.07制作）。</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://colab.research.google.com/drive/166H3k0Si1FhUbZ3mG6Mby1pfBiJ7XhW2?usp=sharing" target="_blank">Open in Colab <i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Rocket Game</h3>
+                    <div class="slider-wrapper" id="slider-rocket">
+                        <div class="slider-track">
+                            <img class="slide-img" src="IMG/ロケット1.jpg" alt="Game Screen 1" loading="lazy">
+                            <img class="slide-img" src="IMG/ロケット2.png" alt="Game Screen 2" loading="lazy">
+                            <img class="slide-img" src="IMG/ロケット3.jpg" alt="Game Screen 3" loading="lazy">
+                            <img class="slide-img" src="IMG/ロケット4.png" alt="Game Screen 4" loading="lazy">
+                        </div>
+                        <button class="slider-btn prev-btn" onclick="moveSlide('slider-rocket', -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="moveSlide('slider-rocket', 1)">&#10095;</button>
+                    </div>
+                    <p style="margin-top: 15px;">PyGame製のシューティングアクション。降ってくるオブジェクトを撃ち落とし、高スコアを目指すゲーム。（2025.01制作）</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://github.com/an-nn-t/game7" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>手書き数字分類 AI</h3>
+                    <div class="slider-wrapper" id="slider-digit">
+                        <div class="slider-track">
+                            <img class="slide-img" src="IMG/手書き数字一枚目.jpg" alt="Digit App 1" loading="lazy">
+                            <img class="slide-img" src="IMG/手書き数字2枚目.jpg" alt="Digit App 2" loading="lazy">
+                            <img class="slide-img" src="IMG/手書き数字3枚目.jpg" alt="Digit App 3" loading="lazy">
+                        </div>
+                        <button class="slider-btn prev-btn" onclick="moveSlide('slider-digit', -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="moveSlide('slider-digit', 1)">&#10095;</button>
+                    </div>
+                    <p style="margin-top: 15px;">PyTorch (CNN) + PySide6 GUI。手書き数字をリアルタイムで推論し、信頼度を表示。（2025.02制作）</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://github.com/an-nn-t/GUI" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>通学遅延情報サイト</h3>
+                    <div class="product-media">
+                        <img src="IMG/自然言語処理実験.jpeg" alt="Location App Screenshot" loading="lazy">
+                    </div>
+                    <p style="margin-top: 15px;">Webスクレイピング（2025.07制作）</p>
+                    <div style="margin-top:15px;">
+                        <!-- <a href="https://github.com/an-nn-t/GUI" target="_blank">View on GitHub <i class="fab fa-github"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>JavaScript技術解説</h3>
+                    <div class="product-media">
+                        <img src="IMG/js技術解説.png" alt="Location App Screenshot" loading="lazy">
+                    </div>
+                    <p style="margin-top: 15px;">JavaScriptの特徴、基本構文、TypeScript、Reactについて紹介しています。（2025.07制作）</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://an-nn-t.github.io/js-explanation/?classId=db09f68b-090a-4556-8a63-dd4e03086151&assignmentId=2f82696f-0485-4216-9832-c5beb7ddf560&submissionId=70c1117b-a8a8-6377-b706-e28db8531a80" target="_blank">View Site <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                    <div class="product-card">
+                    <h3>タスク管理アプリ</h3>
+                    <div class="product-media">
+                        <img src="IMG/タスク管理.png" alt="Location App Screenshot" loading="lazy">
+                    </div>
+                    <p style="margin-top: 15px;">タスクを最小単位に細分化し、進捗を可視化することで、
+                        確実なタスク実行をサポートするタスク管理・ToDoアプリです。（2025.11制作）</p>
+                    <div style="margin-top:15px;">
+                        <a href="https://github.com/an-nn-t/react-todo-app?classId=dcd6bb48-a48c-467e-b1e5-b6a1cddf0b59&assignmentId=edbe37ae-0e23-46ee-902e-9a83fbd47bac&submissionId=769b158e-d4ae-98ee-97b8-2c9c2950c5bc" target="_blank">View GitHub <i class="fab fa-github"></i></a>
+                        <br><a href="https://an-nn-t.github.io/react-todo-app/" target="_blank">View GitHub Pages <i class="fab fa-github"></i></a>
+                    
+                    </div>
+                    
+
+            </div>
+            <div class="product-card">
+
+    <h3>Transformer解説</h3>
+    <div class="slider-wrapper" id="slider-dcon">
+        <div class="slider-track">
+<img class="slide-img" src="IMG/transformer/1.png" alt="Slide 1" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/2.png" alt="Slide 2" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/3.png" alt="Slide 3" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/4.png" alt="Slide 4" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/5.png" alt="Slide 5" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/6.png" alt="Slide 6" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/7.png" alt="Slide 7" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/8.png" alt="Slide 8" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/9.png" alt="Slide 9" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/10.png" alt="Slide 10" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/11.png" alt="Slide 11" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/12.png" alt="Slide 12" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/13.png" alt="Slide 13" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/14.png" alt="Slide 14" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/15.png" alt="Slide 15" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/16.png" alt="Slide 16" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/17.png" alt="Slide 17" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/18.png" alt="Slide 18" loading="lazy">
+            <img class="slide-img" src="IMG/transformer/19.png" alt="Slide 19" loading="lazy">
+        </div>
+        
+        <button class="slider-btn prev-btn" onclick="moveSlide('slider-dcon', -1)">&#10094;</button>
+        <button class="slider-btn next-btn" onclick="moveSlide('slider-dcon', 1)">&#10095;</button>
+    </div>
+
+    <p style="margin-top: 15px;">情報のCanvaを使用する課題でTransformerの解説スライドを作成しました。（2025.09制作）</p>
+    
+    <!-- <div style="margin-top:15px;">
+        <a href="PDF/slide.pdf" target="_blank">PDF全体をダウンロード <i class="fas fa-file-pdf"></i></a>
+    </div> -->
+</div>
+
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card" data-skill="Python">
+                    <img src="IMG/python.png" alt="Python" loading="lazy">
+                    <strong>Python</strong>
+                    <p>Main Language / AI </p>
+                </div>
+                <div class="skill-card" data-skill="HTML/CSS">
+                    <img src="IMG/htmlcss.png" alt="HTML/CSS" loading="lazy">
+                    <strong>HTML / CSS</strong>
+                    <p>Web Design</p>
+                </div>
+                <div class="skill-card" data-skill="Arduino">
+                    <img src="IMG/arduino.png" alt="Arduino" loading="lazy">
+                    <strong>Arduino / ESP32</strong>
+                    <p>IoT & Robotics Control</p>
+                </div>
+                <div class="skill-card" data-skill="Blender">
+                    <img src="IMG/blender.png" alt="Blender" loading="lazy">
+                    <strong>Blender</strong>
+                    <p>3D Modeling</p>
+                </div>
+                <div class="skill-card" data-skill="AtCoder">
+                    <img src="IMG/Atcoder.png" alt="AtCoder" loading="lazy">
+                    <strong>AtCoder</strong>
+                    <p>Algorithm</p>
+                </div>
+                <div class="skill-card" data-skill="Video Editing">
+                    <img src="IMG/動画編集.png" alt="Video Edit" loading="lazy">
+                    <strong>Video Editing</strong>
+                    <p></p>
+                </div>
+                <div class="skill-card" data-skill="Scratch">
+                    <img src="IMG/scratch.png" alt="Scratch" loading="lazy">
+                    <strong>Scratch</strong>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="skill-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title" id="modal-skill-name">Skill Name</h3>
+            <span class="modal-subtitle" id="modal-skill-role">Role / Usage</span>
+            <div class="modal-body" id="modal-skill-desc">
+                </div>
+        </div>
+    </div>
 
     <footer>
-        <p><small>&copy; 2025/5/1 anri. All rights reserved.</small></p>
+        <p>&copy; 2025 ANRI. Designed by GEMINI.</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
