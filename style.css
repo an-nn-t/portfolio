@@ -103,6 +103,8 @@ a {
     color: var(--primary-neon);
     text-decoration: none;
     transition: all 0.3s ease;
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 /* PCのみホバー適用 */
@@ -271,6 +273,8 @@ section.visible {
     position: relative;
     margin-bottom: 40px;
     width: 100%;
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 .timeline-item::after {
@@ -361,6 +365,8 @@ section.visible {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 .product-card::before {
@@ -437,6 +443,8 @@ section.visible {
     transition: all 0.3s;
     position: relative;
     cursor: pointer; /* クリック可能であることを示す */
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 /* PCのみホバー適用 */
@@ -543,6 +551,8 @@ section.visible {
     border: none;
     cursor: pointer;
     transition: color 0.3s;
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 /* PCのみホバー適用 */
@@ -611,6 +621,8 @@ section.visible {
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
+    /* ダブルタップズーム無効化 */
+    touch-action: manipulation;
 }
 
 /* PCのみホバー適用 */
