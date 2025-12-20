@@ -197,6 +197,15 @@ nav a::before {
     }
 }
 
+/* スマホのタップ時（指が触れている間）にもアニメーションさせる */
+nav a:active::before {
+    width: 100%;
+}
+nav a:active {
+    color: var(--primary-neon);
+    text-shadow: 0 0 8px var(--primary-neon);
+}
+
 /* --- Main Layout --- */
 .container {
     max-width: 1200px;
