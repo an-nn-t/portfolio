@@ -103,16 +103,11 @@ a {
     color: var(--primary-neon);
     text-decoration: none;
     transition: all 0.3s ease;
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    a:hover {
-        color: #fff;
-        text-shadow: 0 0 8px var(--primary-neon);
-    }
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--primary-neon);
 }
 
 /* --- Header & Nav --- */
@@ -185,23 +180,11 @@ nav a::before {
     box-shadow: 0 0 5px var(--primary-neon);
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    nav a:hover::before {
-        width: 100%;
-    }
-
-    nav a:hover {
-        color: var(--primary-neon);
-        text-shadow: 0 0 8px var(--primary-neon);
-    }
-}
-
-/* スマホのタップ時（指が触れている間）にもアニメーションさせる */
-nav a:active::before {
+nav a:hover::before {
     width: 100%;
 }
-nav a:active {
+
+nav a:hover {
     color: var(--primary-neon);
     text-shadow: 0 0 8px var(--primary-neon);
 }
@@ -282,8 +265,6 @@ section.visible {
     position: relative;
     margin-bottom: 40px;
     width: 100%;
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
 .timeline-item::after {
@@ -302,17 +283,14 @@ section.visible {
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .timeline-item:hover::after {
-        transform: translateX(-50%) scale(1.2); 
-        background: var(--secondary-neon);
-        border-color: rgba(255, 255, 255, 0.65); /* 透明度50%の白 */
-        box-shadow: 
-            0 0 10px var(--secondary-neon), 
-            0 0 20px var(--secondary-neon),
-            0 0 30px var(--primary-neon);
-    }
+.timeline-item:hover::after {
+    transform: translateX(-50%) scale(1.2); 
+    background: var(--secondary-neon);
+    border-color: rgba(255, 255, 255, 0.65); /* 透明度50%の白 */
+    box-shadow: 
+        0 0 10px var(--secondary-neon), 
+        0 0 20px var(--secondary-neon),
+        0 0 30px var(--primary-neon);
 }
 
 .timeline-content {
@@ -339,13 +317,10 @@ section.visible {
     border-color: transparent rgba(188, 19, 254, 0.2) transparent transparent;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .timeline-content:hover {
-        transform: translateX(10px);
-        box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
-        border-color: var(--primary-neon);
-    }
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    border-color: var(--primary-neon);
 }
 
 .date {
@@ -374,8 +349,6 @@ section.visible {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
 .product-card::before {
@@ -391,17 +364,14 @@ section.visible {
     transition: opacity 0.3s;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .product-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 10px 40px rgba(0, 243, 255, 0.2);
-        border-color: var(--primary-neon);
-    }
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 243, 255, 0.2);
+    border-color: var(--primary-neon);
+}
 
-    .product-card:hover::before {
-        opacity: 1;
-    }
+.product-card:hover::before {
+    opacity: 1;
 }
 
 .product-card h3 {
@@ -429,11 +399,8 @@ section.visible {
     transition: transform 0.5s;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .product-card:hover .product-media img {
-        transform: scale(1.05);
-    }
+.product-card:hover .product-media img {
+    transform: scale(1.05);
 }
 
 /* --- Skills (Hexagon/Grid) --- */
@@ -452,21 +419,16 @@ section.visible {
     transition: all 0.3s;
     position: relative;
     cursor: pointer; /* クリック可能であることを示す */
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .skill-card:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: var(--secondary-neon);
-        box-shadow: 0 0 20px rgba(188, 19, 254, 0.3);
-        transform: translateY(-5px);
-    }
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--secondary-neon);
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.3);
+    transform: translateY(-5px);
 }
 
-/* クリック感を出すためのアクティブ状態（スマホでも有効） */
+/* クリック感を出すためのアクティブ状態 */
 .skill-card:active {
     transform: translateY(2px);
 }
@@ -505,6 +467,7 @@ section.visible {
     z-index: 2000;
     
     /* アニメーション用の設定変更 */
+    /* display: none; はtransitionが効かないので使用しない */
     display: flex; /* レイアウトは維持 */
     justify-content: center;
     align-items: center;
@@ -560,15 +523,10 @@ section.visible {
     border: none;
     cursor: pointer;
     transition: color 0.3s;
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .modal-close:hover {
-        color: var(--secondary-neon);
-    }
+.modal-close:hover {
+    color: var(--secondary-neon);
 }
 
 .modal-title {
@@ -630,17 +588,12 @@ section.visible {
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    /* ダブルタップズーム無効化 */
-    touch-action: manipulation;
 }
 
-/* PCのみホバー適用 */
-@media (hover: hover) {
-    .slider-btn:hover {
-        background: var(--primary-neon);
-        color: #000;
-        box-shadow: 0 0 15px var(--primary-neon);
-    }
+.slider-btn:hover {
+    background: var(--primary-neon);
+    color: #000;
+    box-shadow: 0 0 15px var(--primary-neon);
 }
 
 .prev-btn { left: 10px; }
