@@ -83,10 +83,16 @@ h2::after {
     text-align: center;
     font-size: 2rem;
     color: #fff;
-    margin: 60px 0 40px;
+    
+    /* ▼ 変更点1：左右のマージンを auto にして中央寄せにする */
+    margin: 60px auto 40px;
+    
     text-shadow: 0 0 10px var(--primary-neon);
     position: relative;
-    display: inline-block;
+    
+    /* ▼ 変更点2：inline-block から table に変更 */
+    /* これにより「文字幅に合わせる」と「中央寄せ(margin:auto)」が両立できます */
+    display: table;
 }
 
 .timeline-header::after {
