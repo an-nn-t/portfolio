@@ -386,9 +386,10 @@ section.visible {
 
 .product-media {
     width: 100%;
+    max-width: 500px;
     border-radius: 8px;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 20px auto;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -556,6 +557,8 @@ section.visible {
 .slider-wrapper {
     position: relative;
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
 }

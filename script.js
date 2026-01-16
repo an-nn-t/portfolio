@@ -1,55 +1,3 @@
-// --- Skill Data ---
-const skillData = {
-    "Python": {
-        role: "Main Language / AI / Data Analysis",
-        description: "最も使用頻度が高い言語です。Pytorch、Numpy、Pandas、Matplotlib、OpenCVなどの使用経験があります。",
-        images: ["IMG/python.png"],
-        links: []
-    },
-    "HTML/CSS": {
-        role: "Web Design",
-        description: "このポートフォリオや会社のホームページを作成しました。",
-        images: ["IMG/htmlcss.png"],
-        links: [
-            { label: "会社のHPを見る", url: "https://tosikaihatu.com/" }
-        ]
-    },
-    "Arduino": {
-        role: "IoT & Robotics Control",
-        description: "2年のマイコンの授業や実習、DCONのプロトタイプ制作で使用しました。ESP32を使用し、スマホ操作可能なロボットを作りました。",
-        images: ["IMG/arduino.png"],
-        links: [] 
-    },
-    "Blender": {
-        role: "3D Modeling",
-        description: "中学生の時に、ゲーム（荒野行動）の武器をモデリングしていました。",
-        images: ["IMG/m4a1.png","IMG/m4.JPG","IMG/syuryuudan.png","IMG/手りゅう弾.PNG"],
-        links: []
-    },
-    "AtCoder": {
-        role: "Algorithm",
-        description: "ABCにたまに参加しています。",
-        images: ["IMG/Atcoder.png"],
-        links: [
-            { label: "AtCoder Profile", url: "https://atcoder.jp/users/an_nn_t" }
-        ]
-    },
-    "Video Editing": {
-        role: "CupCut / ゆっくりムービーメーカー",
-        description: "DCON2025の二次審査動画や、YouTube動画の編集を担当しました。",
-        images: ["IMG/動画編集.png"],
-        links: [
-            { label: "YouTubeの動画を見る", url: "https://youtu.be/5z5cuMZl7jg" }
-        ]
-    },
-    "Scratch": {
-        role: "",
-        description: "小学生の時に使用していました。",
-        images: ["IMG/パックマン.png"],
-        links: [ {label: "ゲームを見る", url: "https://scratch.mit.edu/projects/187335258"}]
-    }
-};
-
 // --- Slider Logic Functions ---
 const sliders = {};
 
@@ -118,6 +66,25 @@ document.addEventListener('DOMContentLoaded', () => {
                         contentHTML += `<img src="${src}" style="max-width:100%; height:auto; border-radius:8px; border:1px solid rgba(255,255,255,0.1); margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">`;
                     });
                     contentHTML += `</div>`;
+                }
+
+                // YouTube動画がある場合
+                if (data.youtubeEmbeds && data.youtubeEmbeds.length > 0) {
+                    data.youtubeEmbeds.forEach(embedUrl => {
+                        contentHTML += `
+                            <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; overflow: hidden; max-width: 100%; background: #000; margin-top: 20px; border-radius: 8px;">
+                                <iframe 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    src="${embedUrl}" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        `;
+                    });
                 }
 
                 // リンクがある場合
