@@ -196,11 +196,18 @@ nav a:hover {
     padding: 0 20px;
 }
 
+/* 元の記述から opacity: 0; を削除 */
 section {
     margin-bottom: 100px;
+    /* opacity: 0;  <-- これを消す */
+    /* transform: translateY(30px); <-- これも消す */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 新しく追加 */
+section.js-hidden {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 section.visible {

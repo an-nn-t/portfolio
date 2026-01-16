@@ -142,18 +142,32 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: "0px 0px -50px 0px"
     };
 
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('visible');
+    //         }
+    //     });
+    // }, observerOptions);
+
+    // document.querySelectorAll('section').forEach(section => {
+    //     observer.observe(section);
+    // });
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                // クラスを付け替える
+                entry.target.classList.remove('js-hidden'); // 透明解除
+                entry.target.classList.add('visible');      // ふわっと表示
             }
         });
     }, observerOptions);
 
     document.querySelectorAll('section').forEach(section => {
+        // ここで「JSが有効なら一旦隠す」処理を入れる
+        section.classList.add('js-hidden'); 
         observer.observe(section);
     });
-    
     const headerTitle = document.querySelector('header h1');
     if(headerTitle) {
         headerTitle.style.opacity = 0;
